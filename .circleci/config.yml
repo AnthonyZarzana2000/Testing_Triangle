@@ -6,13 +6,13 @@ orbs:
 jobs:
   build-and-test:
     docker:
-      - image: cimg/python:3.10.2
+      - image: cimg/python:3.12
     steps:
       - checkout
       - run:
           command:
-            /home/circleci/.pyenv/versions/3.10.2/bin/python -m pip install --upgrade pip
-            pip install requests
+            python -m pip install --upgrade pip
+            pip install pytest
             pytest TestTriangle.py
       - store_test_results:
           path: test-results
