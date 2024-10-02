@@ -10,7 +10,7 @@ jobs:
     steps:
       - checkout
       - run:
-          command:|
+          command:  |
             pip install pytest
             pytest TestTriangle.py
       - store_test_results:
