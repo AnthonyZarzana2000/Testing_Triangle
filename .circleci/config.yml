@@ -11,8 +11,7 @@ jobs:
       - checkout
       - run:
           command:
-            python -m pip install --upgrade pip
-            pip install /path/to/TestTriangle.py
+            pip install pytest
             pytest TestTriangle.py
       - store_test_results:
           path: test-results
