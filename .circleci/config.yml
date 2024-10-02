@@ -11,8 +11,8 @@ jobs:
       - checkout
       - run:
           command:
-            python -m pip install --upgrade pip
-            pip install pytest
+            /home/circleci/.pyenv/versions/3.10.2/bin/python -m pip install --upgrade pip
+            pip install requests
             pytest TestTriangle.py
       - store_test_results:
           path: test-results
